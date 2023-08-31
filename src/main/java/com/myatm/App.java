@@ -14,8 +14,7 @@ public class App {
         // Set the expected password
         String expectedPwd = "Admin123";
 
-        // initialize a boolean variable to compare the initial balance to changes made
-        // during transactions
+        // initialize a boolean variable to compare the the expected password to the password provided by the user
         boolean ispasswordsMatch = false;
 
         // Prompt user for password
@@ -40,22 +39,22 @@ public class App {
 
     // Homescreen method that provides the user with options
     private void homeScreen() {
-        LOGGER.info("****************");
-        LOGGER.info("");
-        LOGGER.info("ATM SIMULATOR");
-        LOGGER.info("");
-        LOGGER.info("\"\"\"\"\"\"\"\"\"\"\"\"\"");
-        LOGGER.info("");
-        LOGGER.info("ATM SERVICES");
-        LOGGER.info("");
-        LOGGER.info("-------------------");
-        LOGGER.info("");
-        LOGGER.info("1. Chech Balance");
-        LOGGER.info("2. Deposit");
-        LOGGER.info("3. Withdraw");
-        LOGGER.info("4. Transfer Cash");
-        LOGGER.info("5. Quit");
-        LOGGER.info("");
+        System.out.println("**************************");
+        System.out.println("");
+        System.out.println("ATM SIMULATOR");
+        System.out.println("");
+        System.out.println("\"\"\"\"\"\"\"\"\"\"\"\"\"");
+        System.out.println("");
+        System.out.println("    ATM SERVICES");
+        System.out.println("");
+        System.out.println("--------------------------");
+        System.out.println("");
+        System.out.println("1. Check Balance");
+        System.out.println("2. Deposit");
+        System.out.println("3. Withdraw");
+        System.out.println("4. Transfer Cash");
+        System.out.println("5. Quit");
+        System.out.println("");
 
         String selectedOption = scanner.nextLine();
 
