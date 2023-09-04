@@ -14,7 +14,7 @@ public class App {
         // Set the expected password
         String expectedPwd = "Admin123";
 
-        // initialize a boolean variable to compare the the expected password to the password provided by the user
+        // initialize a boolean variable to compare the expected password to the password provided by the user
         boolean ispasswordsMatch = false;
 
         // Prompt user for password
@@ -41,7 +41,7 @@ public class App {
     private void homeScreen() {
         System.out.println("**************************");
         System.out.println("");
-        System.out.println("ATM SIMULATOR");
+        System.out.println("    ATM SIMULATOR");
         System.out.println("");
         System.out.println("\"\"\"\"\"\"\"\"\"\"\"\"\"");
         System.out.println("");
@@ -75,6 +75,8 @@ public class App {
                 break;
 
             default:
+                LOGGER.info("Enter a valid option: ");
+                homeScreen();
                 break;
         }
     }
@@ -96,7 +98,7 @@ public class App {
 
         } catch (Exception e) {
             LOGGER.info("Enter valid amount ");
-            withdraw();
+            cashDeposit();
         }
 
     }
@@ -104,6 +106,7 @@ public class App {
     private void withdraw() {
         double WithdrawalCharges = 0.02;
         LOGGER.info("Enter amount to withdraw: ");
+
 
         try {
             double withdrawalAmount = Double.parseDouble(scanner.nextLine());
@@ -127,7 +130,7 @@ public class App {
 
         } catch (Exception e) {
             LOGGER.info("Enter valid amount ");
-            withdraw();
+            cashTransfer();
         }
     }
 
